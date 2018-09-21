@@ -9,7 +9,9 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    self.characters.collect {|character| character.name}
+    self.characters.collect do |character|
+      "#{self.first_name} #{self.last_name}"
+    end
   end
 
 end
