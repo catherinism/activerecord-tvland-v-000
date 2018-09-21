@@ -8,10 +8,10 @@ class Actor < ActiveRecord::Base
     "#{self.first_name} #{self.last_name}"
   end
 
-  # def list_roles
-  #   self.characters.collect do |character|
-  #     "#{self.first_name} #{self.last_name}"
-  #   end
-  # end
+  def list_roles
+    self.characters.collect do |character|
+      "#{self.first_name} #{self.last_name}"
+    end
+  end
 
 end
